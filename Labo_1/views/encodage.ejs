@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" type="text/css" href="encodage.css" />
+        <script type="text/javascript" src="../controllers/annulation.js" defer></script>
+    </head>
+    <body style="height: fit-content;" >
+        <h1> Encodage des voyageurs </h1>
+        <form id="namesForm" action="/names" method="post"> 
+            <% for(let i = 0; i < seatsnumb; i++) { %>
+                <label> Nom <input name="name" required = "required"> </label>
+                <label> Age <input type="number" min="0" name="age" required = "required"> </label>
+            <% } %>
+            <label> <button type="submit"> Etape suivante </button> <button id="annulation" type="button"> Annuler la réservation </button> </label>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" type="text/css" href="reservation.css" />
+        <script type="text/javascript" src="../controllers/totalprice.js" defer></script>
+    </head>
+    <body>
+        <h1> Réservation </h1>
+        <form action="/reservation" method="post"> 
+            <label> Destination <input required="required" name="destination"> </label>
+            <label> Nombre de places <input required="required" name="seats" id="seats"> </label>
+            <label> Assurance <input type="checkbox" id="assurance" name="assurance"></label>
+            <button type="submit"> Etape suivante </button>
+        </form>
+        <div>
+            <button type="button" id="calculateTotal"> Calculer le total </button>
+            <label id="spanResult" name="totalprice"></label>
+        </div>
+    </body>
+</html>

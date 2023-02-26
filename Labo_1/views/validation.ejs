@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" type="text/css" href="reservation.css" />
+        <script type="text/javascript" src="../controllers/annulation.js" defer></script>
+    </head>
+    <body>
+        <h1> Validation des réservations </h1>
+        <h2> Destination : <%= destination %></h2>
+        <h2> Liste des passagers </h2>
+        <div>
+            <form action="/database" method="get">
+                <% for(let i = 0; i < names.length; i++) {%>
+                    <ul>
+                        <li> <%= names[i]%> <%= age[i] %> ans</li>
+                    </ul>
+                <% } %>
+                <label> <button type="submit"> Etape suivante</button>  <button type="button" id="annulation"> Annuler la réservation</button></label>
+            </form>
+        </div>
+    </body>
+</html>
